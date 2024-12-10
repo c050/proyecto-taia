@@ -50,6 +50,7 @@ class ResNet18Encoder(nn.Module):
 
     def __init__(self, out_features=6):
         super(ResNet18Encoder, self).__init__()
+        self.name: str = 'ResNet18'
         self.in_channels: int = 64
         self.conv1: nn.Conv2d = nn.Conv2d(
             3, 64, kernel_size=3, stride=1, padding=1, bias=False)
